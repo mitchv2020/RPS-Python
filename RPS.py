@@ -4,7 +4,7 @@ import os
 def startScreen():
     firstChoice = input("Who is going to go first? (Player 1 / Player 2): ")
     
-    while firstChoice != "Player 1" or firstChoice != "Player 2":
+    while firstChoice != "Player 1" and firstChoice != "Player 2":
         os.system("clear")
         input("Invalid Option. Please pick a valid option.")
         firstChoice = input("Who is going to go first? (Player 1 / Player 2): ")
@@ -19,7 +19,7 @@ def beginGame(firstChoice):
         print ()
         p1Choice = input("What is your choice? (R/P/S): ")
         
-        while p1Choice != "R" or p1Choice != "P" or p1Choice != "S":
+        while p1Choice != "R" and p1Choice != "P" and p1Choice != "S":
             os.system("clear")
             input("Invalid Option. Please pick a valid option.")
             p1Choice = input("What is your choice? (R/P/S): ")
@@ -29,7 +29,7 @@ def beginGame(firstChoice):
         print ()
         p2Choice = input("What is your choice? (R/P/S):")
         
-        while p2Choice != "R" or p2Choice != "P" or p2Choice != "S":
+        while p2Choice != "R" and p2Choice != "P" and p2Choice != "S":
             os.system("clear")
             input("Invalid Option. Please pick a valid option.")
             p2Choice = input("What is your choice? (R/P/S): ")
@@ -91,7 +91,7 @@ def displayResults(winner, p1Choice, p2Choice):
     
     restart = input("Would you like to restart? (Y/N): ")
     
-    while restart != "Y" or restart != "N":
+    while restart != "Y" and restart != "N":
         os.system("clear")
         input("Invalid Option. Please pick a valid option.")
         p1Choice = input("Would you like to restart? (Y/N): ")
