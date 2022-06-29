@@ -1,17 +1,16 @@
+# Rock Paper Scissors
 
 import os
 
 def startScreen():
   os.system("clear")
   
-  firstChoice = input("Who is going to go first? (Player 1 / Player 2): ")
-  firstChoice = firstChoice.upper()
+  firstChoice = input("Who is going to go first? (Player 1 / Player 2): ").upper()
     
   while firstChoice != "PLAYER 1" and firstChoice != "PLAYER 2":
     os.system("clear")
     input("Invalid Option. Please pick a valid option.")
-    firstChoice = input("Who is going to go first? (Player 1 / Player 2): ")
-    firstChoice = firstChoice.upper()
+    firstChoice = input("Who is going to go first? (Player 1 / Player 2): ").upper()
         
   return firstChoice
 
@@ -21,50 +20,42 @@ def beginGame(firstChoice):
   if firstChoice == "PLAYER 1":
     print ("Player One's Go:")
     print ()
-    p1Choice = input("What is your choice? (R/P/S): ")
-    p1Choice = p1Choice.upper()
+    p1Choice = input("What is your choice? (R/P/S): ").upper()
         
     while p1Choice != "R" and p1Choice != "P" and p1Choice != "S":
       os.system("clear")
       input("Invalid Option. Please pick a valid option.")
-      p1Choice = input("What is your choice? (R/P/S): ")
-      p1Choice = p1Choice.upper()
+      p1Choice = input("What is your choice? (R/P/S): ").upper()
         
     os.system("clear")
     print ("Player Two's Go:")
     print ()
-    p2Choice = input("What is your choice? (R/P/S):")
-    p2Choice = p2Choice.upper()
+    p2Choice = input("What is your choice? (R/P/S):").upper()
         
     while p2Choice != "R" and p2Choice != "P" and p2Choice != "S":
       os.system("clear")
       input("Invalid Option. Please pick a valid option.")
-      p2Choice = input("What is your choice? (R/P/S): ")
-      p2Choice = p2Choice.upper()
+      p2Choice = input("What is your choice? (R/P/S): ").upper()
 
   if firstChoice == "PLAYER 2":
     print ("Player Two's Go:")
     print ()
-    p2Choice = input("What is your choice? (R/P/S): ")
-    p2Choice = p2Choice.upper()
+    p2Choice = input("What is your choice? (R/P/S): ").upper()
         
     while p2Choice != "R" and p2Choice != "P" and p2Choice != "S":
       os.system("clear")
       input("Invalid Option. Please pick a valid option.")
-      p2Choice = input("What is your choice? (R/P/S): ")
-      p2Choice = p2Choice.upper()
+      p2Choice = input("What is your choice? (R/P/S): ").upper()
 
     os.system("clear")
     print ("Player One's Go:")
     print ()
-    p1Choice = input("What is your choice? (R/P/S):")
-    p1Choice = p1Choice.upper()
+    p1Choice = input("What is your choice? (R/P/S):").upper()
         
     while p1Choice != "R" and p1Choice != "P" and p1Choice != "S":
       os.system("clear")
       input("Invalid Option. Please pick a valid option.")
-      p1Choice = input("What is your choice? (R/P/S): ")
-      p1Choice = p1Choice.upper()
+      p1Choice = input("What is your choice? (R/P/S): ").upper()
             
   return p1Choice, p2Choice
     
@@ -119,24 +110,9 @@ def displayResults(winner, p1Choice, p2Choice):
   os.system("clear")
     
   print(winner)
-    
+  print()
   print("Player 1 chose:", p1Choice)
   print("Player 2 chose:", p2Choice)
-    
-  restart = input("Would you like to restart? (Y/N): ")
-  restart = restart.upper()
-    
-  while restart != "Y" and restart != "N":
-    os.system("clear")
-    input("Invalid Option. Please pick a valid option.")
-    restart = input("Would you like to restart? (Y/N): ")
-    restart = restart.upper()
-    
-  if restart == "Y":
-    firstChoice = startScreen()
-    
-  if restart == "N":
-    exit()
 
 ## MAIN PROGRAM
 
